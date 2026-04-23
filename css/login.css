@@ -1,0 +1,403 @@
+/* =========================
+   FUENTE
+========================= */
+@font-face {
+    font-family: "Pop Boutique";
+    src: url('../assets/font/Pop Boutique.ttf') format('truetype');
+}
+
+/* =========================
+   RESET + FONDO
+========================= */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Pop Boutique', 'Courier New', monospace;
+    background-color: #f5e6ea;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* =========================
+   WRAPPER DE PÁGINA
+========================= */
+.page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../assets/img/d01-bg-checked.gif');
+    background-repeat: repeat;
+}
+
+.page-border-top,
+.page-border-bottom {
+    background-color: #f5e6ea;
+    background-image: url('../assets/img/back01.gif');
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-size: auto 16px;
+    height: 32px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.page-content {
+    flex: 1;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 16px;
+    box-sizing: border-box;
+}
+
+/* =========================
+   MARCO
+========================= */
+.box19 {
+    width: 100%;
+    max-width: 420px;
+    margin: 0;
+    position: relative;
+}
+
+.u01 {
+    background: url('../assets/img/f-ue.gif') repeat-x;
+    height: 32px;
+    margin: 0 32px;
+}
+
+.s01 {
+    background: url('../assets/img/f-sita.gif') repeat-x;
+    height: 32px;
+    margin: 0 32px;
+}
+
+.box-top {
+    background-image: url('../assets/img/f-kado1.gif'),
+                      url('../assets/img/f-kado2.gif');
+    background-position: top left, top right;
+    background-repeat: no-repeat;
+    height: 32px;
+}
+
+.box-center {
+    background-image: url('../assets/img/f-migi.gif'),
+                      url('../assets/img/f-hidari.gif');
+    background-position: top right, top left;
+    background-repeat: repeat-y;
+}
+
+.box-inner {
+    background: #ffffff;
+    margin: 0 32px;
+    padding: 20px;
+    text-align: center;
+}
+
+.box-bottom {
+    background-image: url('../assets/img/f-kado3.gif'),
+                      url('../assets/img/f-kado4.gif');
+    background-position: top left, top right;
+    background-repeat: no-repeat;
+    height: 32px;
+}
+
+/* =========================
+   LOGIN
+========================= */
+.login-header {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ffb6c1;
+}
+
+.login-header h2 {
+    margin: 0;
+    color: #f8c8d0;
+    font-size: 45px;
+    letter-spacing: 2px;
+
+    text-shadow:
+        -2px -2px 0 #8b5a41,
+         2px -2px 0 #8b5a41,
+        -2px  2px 0 #8b5a41,
+         2px  2px 0 #8b5a41;
+}
+
+/* Inputs */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ffb6c1;
+    background-color: #fff0f5;
+    font-size: 16px;
+    font-family: 'Pop Boutique', 'Courier New', monospace;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BOTÓN CON TEXTO ENCIMA
+========================= */
+.login-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.login-btn {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-btn img {
+    display: block;
+    width: 140px;
+    height: auto;
+}
+
+/* TEXTO SOBRE EL GIF */
+.btn-text {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'Pop Boutique', 'Courier New', monospace;
+    font-size: 20px;
+
+    color: #8b5a41;
+
+    text-align: center;
+    white-space: nowrap;
+
+    text-shadow:
+        -1px -1px 0 #fff,
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff;
+
+    pointer-events: none;
+}
+
+/* hover y click retro */
+.login-btn:hover img {
+    filter: brightness(1.1);
+}
+
+.login-btn:active {
+    transform: translate(1px, 1px);
+}
+
+/* link */
+.register-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #ffb6c1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+    color: #8b5a41;
+}
+
+/* =========================
+   ERROR LOGIN ANIMADO
+========================= */
+.login-error {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login-error[hidden] {
+    display: none !important;
+}
+
+.login-error-headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Evita que se salga del cuadro */
+    max-width: 90%;
+}
+
+.invalid-rabbit {
+    width: 35px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.snake-invalid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que el texto baje si es muy largo */
+    justify-content: center;
+    gap: 1px;
+    margin: 0;
+}
+
+.snake-invalid .snake-char {
+    display: inline-block;
+    font-family: 'Pop Boutique', 'Courier New', monospace;
+    font-size: 24px; /* Tamaño ajustado para que quepa en el marco */
+    color: #ff4d4d; /* Un rojo tierno para el error */
+    line-height: 1.2;
+    text-shadow:
+        -1px -1px 0 #fff,
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff;
+    animation: invalidJump 0.8s ease-in-out infinite;
+}
+
+.snake-invalid .snake-space {
+    width: 8px;
+}
+
+/* La animación que faltaba */
+@keyframes invalidJump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Animación de salto */
+@keyframes invalidJump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px); /* Salto más pronunciado */
+    }
+}
+
+/* =========================
+   CONEJOS ESQUINAS
+========================= */
+.corner-rabbits {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    left: auto;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 10;
+    gap: 4px;
+    width: auto;
+}
+
+.corner-rabbits img {
+    width: 22px;
+    height: auto;
+}
+
+/* =========================
+   CONEJOS PIE
+========================= */
+.footer-rabbits {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.footer-rabbits img {
+    width: 40px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .page-content {
+        padding: 24px 12px;
+    }
+
+    .login-header h2 {
+        font-size: 36px;
+    }
+
+    .footer-rabbits {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .footer-rabbits img {
+        width: 34px;
+    }
+}
+
+@media (max-width: 420px) {
+    .u01,
+    .s01 {
+        margin: 0 22px;
+    }
+
+    .box-inner {
+        margin: 0 22px;
+        padding: 16px;
+    }
+
+    .login-header h2 {
+        font-size: 30px;
+    }
+
+    .snake-invalid .snake-char {
+        font-size: 24px;
+    }
+
+    .invalid-rabbit {
+        width: 24px;
+    }
+}
+
+.login-error, .register-success {
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    text-align: center;
+    width: 90%; /* Evita que choque con los bordes del box-inner */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-error-headline, .success-headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Si el texto es largo, baja a la siguiente línea en lugar de salirse */
+}
+
+.snake-invalid, .snake-rainbow {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+}

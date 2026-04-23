@@ -1,0 +1,298 @@
+/* =========================
+   FUENTE
+========================= */
+@font-face {
+    font-family: "Pop Boutique";
+    src: url('../assets/font/Pop Boutique.ttf') format('truetype');
+}
+
+/* =========================
+   RESET + FONDO
+========================= */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Pop Boutique', 'Courier New', monospace;
+    background-color: #f5e6ea;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* =========================
+   WRAPPER DE PÁGINA
+========================= */
+.page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../assets/img/d01-bg-checked.gif');
+    background-repeat: repeat;
+}
+
+.page-border-top,
+.page-border-bottom {
+    background-color: #f5e6ea;
+    background-image: url('../assets/img/back01.gif');
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-size: auto 16px;
+    height: 32px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.page-content {
+    flex: 1;
+    width: 100%;
+    max-width: 820px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 16px;
+    box-sizing: border-box;
+}
+
+/* =========================
+   LAYOUT CON CONEJO LATERAL
+========================= */
+.register-layout {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.side-rabbit {
+    width: 80px; 
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* =========================
+   MARCO
+========================= */
+.box19 {
+    width: 420px;
+    margin: 0;
+    position: relative;
+}
+
+.u01 {
+    background: url('../assets/img/f-ue.gif') repeat-x;
+    height: 32px;
+    margin: 0 32px;
+}
+
+.s01 {
+    background: url('../assets/img/f-sita.gif') repeat-x;
+    height: 32px;
+    margin: 0 32px;
+}
+
+.box-top {
+    background-image: url('../assets/img/f-kado1.gif'), url('../assets/img/f-kado2.gif');
+    background-position: top left, top right;
+    background-repeat: no-repeat;
+    height: 32px;
+}
+
+.box-center {
+    background-image: url('../assets/img/f-migi.gif'), url('../assets/img/f-hidari.gif');
+    background-position: top right, top left;
+    background-repeat: repeat-y;
+}
+
+.box-inner {
+    background: #ffffff;
+    margin: 0 32px;
+    padding: 20px;
+    text-align: center;
+}
+
+.box-bottom {
+    background-image: url('../assets/img/f-kado3.gif'), url('../assets/img/f-kado4.gif');
+    background-position: top left, top right;
+    background-repeat: no-repeat;
+    height: 32px;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+.login-header {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ffb6c1;
+}
+
+.login-header h2 {
+    margin: 0;
+    color: #f8c8d0;
+    font-size: 45px;
+    letter-spacing: 2px;
+    text-shadow: -2px -2px 0 #8b5a41, 2px -2px 0 #8b5a41, -2px 2px 0 #8b5a41, 2px 2px 0 #8b5a41;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ffb6c1;
+    background-color: #fff0f5;
+    font-size: 16px;
+    font-family: 'Pop Boutique', 'Courier New', monospace;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BOTÓN
+========================= */
+.login-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.login-btn {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-btn img {
+    display: block;
+    width: 140px;
+    height: auto;
+}
+
+.btn-text {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-family: 'Pop Boutique', 'Courier New', monospace;
+    font-size: 20px;
+    color: #8b5a41;
+    text-align: center;
+    white-space: nowrap;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    pointer-events: none;
+}
+
+.login-btn:hover img { filter: brightness(1.1); }
+.login-btn:active { transform: translate(1px, 1px); }
+
+.register-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #ffb6c1;
+    text-decoration: none;
+    font-size: 14px;
+}
+.register-link:hover { text-decoration: underline; color: #8b5a41; }
+
+/* =========================
+   EXITO DE REGISTRO
+========================= */
+.register-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.register-success[hidden] {
+    display: none !important;
+}
+
+.success-headline {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.success-rabbit {
+    width: 32px;
+    height: auto;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    flex-shrink: 0;
+}
+
+.snake-rainbow {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2px;
+    margin: 0;
+    min-height: 42px;
+    animation: snakeShift 1.8s ease-in-out infinite;
+}
+
+/* Ajuste vital para que JS aplique la animación */
+.snake-char {
+    display: inline-block;
+    font-family: 'Pop Boutique', 'Courier New', monospace;
+    font-size: 30px;
+    line-height: 1;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    animation: snakeJump 1s ease-in-out infinite;
+}
+
+.snake-space { width: 8px; }
+
+.redirect-note {
+    margin: 0;
+    color: #8b5a41;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+@keyframes snakeJump {
+    0%, 100% { transform: translateY(4px) scale(1); }
+    50% { transform: translateY(-5px) scale(1.03); }
+}
+
+@keyframes snakeShift {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+@media (max-width: 768px) {
+    .page-content { max-width: 760px; padding: 24px 12px; }
+    .register-layout { flex-direction: column; gap: 10px; width: 100%; }
+    .side-rabbit { width: 64px; }
+    .box19 { width: 100%; max-width: 420px; }
+    .login-header h2 { font-size: 36px; }
+}
+
+@media (max-width: 420px) {
+    .u01, .s01 { margin: 0 22px; }
+    .box-inner { margin: 0 22px; padding: 16px; }
+    .login-header h2 { font-size: 30px; }
+    .side-rabbit { width: 56px; }
+    .snake-char { font-size: 24px; }
+    .success-rabbit { width: 26px; }
+}

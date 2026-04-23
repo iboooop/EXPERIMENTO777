@@ -1,0 +1,369 @@
+@font-face {
+    font-family: "Pop Boutique";
+    src: url('../assets/font/Pop Boutique.ttf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pop Boutique', monospace;
+    min-height: 100vh;
+    background-color: #f5e6ea;
+    overflow-x: hidden;
+}
+
+a, button, input, select, textarea {
+    cursor: url('https://cdn.cursors-4u.net/cursors/animated/bobblehead-bunny-42f04b22-32.ani'),
+            url('https://cdn.cursors-4u.net/cursors/animated/bobblehead-bunny-42f04b22-32.gif'), pointer;
+}
+
+/* BORDES */
+.page-border-top, .page-border-bottom {
+    background-color: #f5e6ea;
+    background-image: url('../assets/img/back01.gif');
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-size: auto 16px;
+    height: 32px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* CONTENEDOR DE CONTENIDO */
+.page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../assets/img/d01-bg-checked.gif');
+    background-repeat: repeat;
+}
+
+.page-content {
+    flex: 1;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 30px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.roulette-layout {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    padding-left: 0;
+}
+
+/* HEADER */
+.welcome-header {
+    display: flex;
+    width: 320px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+}
+
+.welcome-top-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.welcome-plate-wrap {
+    position: relative;
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.welcome-plate {
+    width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: pixelated;
+}
+
+.welcome-title {
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 78%;
+    margin: 0;
+    color: #f8c8d0;
+    font-family: 'Pop Boutique', 'Courier New', monospace;
+    font-size: 22px;
+    line-height: 1.1;
+    text-align: center;
+    letter-spacing: 1px;
+    white-space: normal;
+    text-shadow: -2px -2px 0 #8b5a41, 2px -2px 0 #8b5a41, -2px 2px 0 #8b5a41, 2px 2px 0 #8b5a41;
+}
+
+.welcome-title .username {
+    display: block;
+    font-size: 18px;
+}
+
+.logout-btn {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-btn img {
+    display: block;
+    width: 140px;
+    height: auto;
+}
+
+.btn-text {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-family: 'Pop Boutique', 'Courier New', monospace;
+    color: #8b5a41;
+    font-size: 20px;
+    text-align: center;
+    white-space: nowrap;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    pointer-events: none;
+}
+
+.logout-btn:hover img { filter: brightness(1.1); }
+.logout-btn:active { transform: translate(1px, 1px); }
+
+.side-rabbit-right {
+    width: 62px;
+    height: auto;
+    image-rendering: pixelated;
+    align-self: flex-start;
+    margin-top: 18px;
+}
+
+.extra-rabbits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.stack-rabbit { width: 60px; height: auto; image-rendering: pixelated; }
+
+/* MARCO DEL CARRUSEL (BOX19) */
+.box19 {
+    width: 100%;
+    max-width: 750px;
+}
+
+.u01, .s01 { height: 32px; margin: 0 32px; }
+.u01 { background: url('../assets/img/f-k6.gif') repeat-x; }
+.s01 { background: url('../assets/img/f-k5.gif') repeat-x; }
+
+.box-top {
+    background: url('../assets/img/f-k1.gif') left no-repeat, url('../assets/img/f-k2.gif') right no-repeat;
+    height: 32px;
+}
+
+.box-center {
+    background: url('../assets/img/f-k8.gif') right repeat-y, url('../assets/img/f-k7.gif') left repeat-y;
+}
+
+.box-inner {
+    background: #ffffff;
+    margin: 0 32px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.box-bottom {
+    background: url('../assets/img/f-k3.gif') left no-repeat, url('../assets/img/f-k4.gif') right no-repeat;
+    height: 32px;
+}
+
+/* CARRUSEL Y FOTOS */
+.carousel {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.arrow-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    transition: transform 0.15s ease;
+}
+
+.arrow-btn img {
+    width: 34px;
+    image-rendering: pixelated;
+    transition: filter 0.15s ease;
+}
+
+.arrow-btn:hover { transform: translateY(-2px) scale(1.06); }
+.arrow-btn:hover img { filter: brightness(1.15); }
+.arrow-btn:active { transform: translateY(0) scale(0.98); }
+
+/* CONTENEDOR DE LA FOTO FIJO */
+.rabbit-photo {
+    position: relative;
+    width: 420px;
+    height: 300px;
+    padding: 12px;
+    border: 8px solid #ffffff;
+    outline: 2px dotted #4f3b35;
+    outline-offset: 0;
+    border-radius: 6px;
+    background: #ffffff;
+    box-shadow: 0 2px 0 rgba(79, 59, 53, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Esto asegura que la foto no se salga del borde */
+}
+
+/* IMAGEN SIEMPRE AL 100% DEL MARCO */
+.rabbit-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover llena el cuadro completo. Si prefieres que se vea la foto entera aunque queden bordes blancos, cámbialo a 'contain' */
+    border: 2px dashed #ff99aa; /* Estética kawaii integrada aquí */
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* MARCOS DE INFO */
+.info-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.plate-name-container {
+    background: transparent;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plate-details-container {
+    background:
+        url('../assets/img/f-kado1\ \(1\).gif') left top no-repeat,
+        url('../assets/img/f-kado2\ \(1\).gif') right top no-repeat,
+        url('../assets/img/f-kado3\ \(1\).gif') left bottom no-repeat,
+        url('../assets/img/f-kado4\ \(1\).gif') right bottom no-repeat,
+        url('../assets/img/f-tate.gif') left top repeat-y,
+        url('../assets/img/f-tate.gif') right top repeat-y,
+        url('../assets/img/f-yoko.gif') left top repeat-x,
+        url('../assets/img/f-yoko.gif') left bottom repeat-x,
+        #ffffff;
+    width: 520px;
+    min-height: 168px;
+    height: auto;
+    padding: 18px 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-inner-text {
+    text-align: left;
+    width: 100%;
+    padding-right: 26px;
+}
+
+.info-rabbit-right {
+    position: absolute;
+    right: -8px;
+    bottom: -8px;
+    width: 72px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.rabbit-name, .rabbit-desc {
+    margin: 6px 0;
+    font-family: 'Pop Boutique', 'Courier New', monospace;
+}
+
+.rabbit-name {
+    color: #ff4b59;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-shadow: -2px -2px 0 #8f1f2d, 2px -2px 0 #8f1f2d, -2px 2px 0 #8f1f2d, 2px 2px 0 #8f1f2d;
+}
+
+.rabbit-desc {
+    color: #c6283c;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.rabbit-desc:empty { display: none; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .roulette-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding-left: 0;
+    }
+    .welcome-header { width: min(320px, 92vw); margin-top: 0; }
+    .welcome-plate-wrap { width: min(250px, 68vw); }
+    .side-rabbit-right { width: 52px; margin-top: 0; align-self: center; }
+    .stack-rabbit { width: 54px; }
+    .welcome-title { font-size: 20px; }
+    .welcome-title .username { font-size: 16px; }
+    .box19 { max-width: 95%; }
+    .rabbit-photo { width: 280px; height: 210px; }
+    .plate-name-container { width: 100%; max-width: 330px; height: auto; padding: 0; }
+    .plate-details-container { width: 330px; min-height: 138px; padding: 12px 16px; }
+    .details-inner-text { padding-right: 18px; }
+    .info-rabbit-right { width: 56px; right: -6px; bottom: -6px; }
+    .rabbit-name { font-size: 24px; }
+    .rabbit-desc { font-size: 15px; }
+}
+
+/* Animación de letras bailando */
+@keyframes snakeDance {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.snake-letter {
+    display: inline-block;
+    animation: snakeDance 0.6s infinite ease-in-out;
+}
